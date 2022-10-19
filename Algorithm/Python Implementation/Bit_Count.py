@@ -1,11 +1,17 @@
-# Bit count
+# write a python program to count total number of bits in a number
 
-n = 15
+num = int(input("Please Enter any Number: "))
 
-count = 0
+# use bin () method to get the binary value of a number 
+# print binary value output will be 0b111101
+print ("binary value of {0} is: {1}".format(num, bin(num)))
 
-for i in range(32):
-    if n & ( 1 << i) != 0:
-        count += 1
+# store the length of the binary number
+length = len(bin(num))
 
-print(count)
+# to get exact length total number of bits
+# subtract 2 from the length
+length -=2
+
+# print length
+print ("total number of bits: ", length)

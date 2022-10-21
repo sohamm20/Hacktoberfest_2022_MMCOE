@@ -1,9 +1,8 @@
-# write a python program to count total number of bits in a number
+
 
 num = int(input("Please Enter any Number: "))
 
-# use bin () method to get the binary value of a number 
-# print binary value output will be 0b111101
+
 print ("binary value of {0} is: {1}".format(num, bin(num)))
 
 # store the length of the binary number

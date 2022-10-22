@@ -2,7 +2,11 @@
 // Hence the algorithm is same as BubbleSort with a mechanism to determine whether the list/array DS is sorted or not after every iteration, which ensures that 
 // the program only runs till the array/list is sorted.
 //
-#include < iostream >
+// Optimized bubble sort is basically a smarter version of bubble sort algorithm.
+// Hence the algorithm is same as BubbleSort with a mechanism to determine whether the list/array DS is sorted or not after every iteration, which ensures that 
+// the program only runs till the array/list is sorted.
+//
+#include <iostream>
 using namespace std;
 
 void optimizedbubbleSort(int a[]) {
@@ -26,21 +30,28 @@ void optimizedbubbleSort(int a[]) {
 }
 
 int main() {
-  int myarray[5];
-  cout << "Enter 5 integers in any order: " << endl;
-  for (int i = 0; i < 5; i++) {
-    cin >> myarray[i];
+	
+  int n; 
+  cout<<"Enter the size of array:- ";
+  cin>>n; 
+  
+  int arr[n];
+  cout << "Enter the elements of array:- ";
+  for (int i=0; i<n; i++) {
+    cin >> arr[i];
   }
-  cout << "Before Sorting" << endl;
-  for (int i = 0; i < 5; i++) {
-    cout << myarray[i] << " ";
+  
+  cout << "Before Sorting it looked like" << endl;
+  for (int i=0 ; i<n ; i++) {
+    cout << arr[i] << "\t";
   }
-  cout << endl;
-  optimizedbubbleSort(myarray); // sorting
+  cout<<endl;
+  
+  optimizedbubbleSort(arr); // sorting
 
-  cout << "After Sorting" << endl;
-  for (int i = 0; i < 5; i++) {
-    cout << myarray[i] << " ";
+  cout << "After Sorting it looks like:- " << endl;
+  for (int i=0; i<n; i++) {
+    cout << arr[i] << "\t";
   }
 
   return 0;

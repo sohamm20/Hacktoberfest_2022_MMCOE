@@ -11,9 +11,9 @@
 #include <iostream>
   using namespace std;
 
-void bubbleSort(int a[]) {
-  for (int i = 0; i < 5; i++) {
-    for (int j = 0; j < (5 - i - 1); j++) {
+void bubbleSort(int a[], int n) {
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < (n - i - 1); j++) {
       if (a[j] > a[j + 1]) {
         int temp = a[j];
         a[j] = a[j + 1];
@@ -42,7 +42,7 @@ int main() {
     cout << arr[i] << "\t";
   }
 
-  bubbleSort(arr); // sorting
+  bubbleSort(arr,size); // sorting
   
 	cout<<endl; 
 	

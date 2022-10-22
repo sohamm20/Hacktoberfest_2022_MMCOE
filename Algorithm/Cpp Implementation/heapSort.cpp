@@ -61,10 +61,19 @@ void heapSort(int *arr, int n) {
 
 int main() {
 	
-	int arr[10] = {12,15, 85, 64, 924, 4654, 251, 314, 457, 967}; 
-	heapSort(arr,10); 
+	int n;
+	
+	cout<<"Enter the size of array:- "; 
+	cin>> n; 
+	int arr[n]; 
+	cout<<"Enter the elements of array:- "<<endl; 
+	for(int i=0; i<n; i++) {
+		cin>>arr[i]; 
+	}
+	
+	heapSort(arr,n); 
 	cout<<"Sorted order is as follows!"<<endl; 
-	for(int i=0; i<10; i++) 
+	for(int i=0; i<n; i++) 
 		cout<<arr[i]<<"\t";
 		
 	return 0;

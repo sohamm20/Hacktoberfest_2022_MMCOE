@@ -13,13 +13,13 @@
 */
 
 
-#include < iostream >
+#include <iostream>
   using namespace std;
 
-void insertionSort(int arr[]) {
+void insertionSort(int arr[], int n) {
   int key;
   int j = 0;
-  for (int i = 1; i < 5; i++) {
+  for (int i = 1; i < n; i++) {
     key = arr[i];
     j = i - 1;
     while (j >= 0 && arr[j] > key) {
@@ -32,22 +32,27 @@ void insertionSort(int arr[]) {
 }
 
 int main() {
-  int myarray[5];
-  cout << "Enter 5 integers in any order" << endl;
-  for (int i = 0; i < 5; i++) {
-    cin >> myarray[i];
+  int n;
+  cout<<"Enter the size of array:- "; 
+  cin>>n; 
+  
+  int arr[n];
+  
+  cout << "Enter the elements of array:- " << endl;
+  for (int i = 0; i < n; i++) {
+    cin >> arr[i];
   }
 
-  cout << "Before Sorting: " << endl;
-  for (int i = 0; i < 5; i++) {
-    cout << myarray[i] << " ";
+  cout << "Before Sorting it looked like: ";
+  for (int i = 0; i < n; i++) {
+    cout << arr[i] << "\t";
   }
 
-  insertionSort(myarray);
+  insertionSort(arr , n);
 
-  cout << endl << "After Sorting: " << endl;
-  for (int i = 0; i < 5; i++) {
-    cout << myarray[i] << " ";
+  cout << endl << "After Sorting it looks like:- ";
+  for (int i = 0; i < n; i++) {
+    cout << arr[i] << "\t";
   }
 
   return 0;

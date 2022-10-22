@@ -8,7 +8,7 @@
       end loop // inner loop
     end loop // outer loop
 */ 
-#include < iostream >
+#include <iostream>
   using namespace std;
 
 void bubbleSort(int a[]) {
@@ -24,22 +24,31 @@ void bubbleSort(int a[]) {
 }
 
 int main() {
-  int myarray[5];
   int size;
-  cout << "Enter 5 integers in any order: " << endl;
-  for (int i = 0; i < 5; i++) {
-    cin >> myarray[i];
+  
+  cout<<"Enter the size of array:- ";
+  cin>> size; 
+  
+  int arr[size]; 
+  
+  cout << "Enter the elements of array:- "; 
+  
+  for (int i = 0; i < size; i++) {
+    cin >> arr[i];
   }
-  cout << "Before Sorting" << endl;
-  for (int i = 0; i < 5; i++) {
-    cout << myarray[i] << " ";
+  cout << "Before Sorting it looked like:- ";
+  
+  for (int i = 0; i < size; i++) {
+    cout << arr[i] << "\t";
   }
 
-  bubbleSort(myarray); // sorting
-
-  cout << endl << "After Sorting" << endl;
-  for (int i = 0; i < 5; i++) {
-    cout << myarray[i] << " ";
+  bubbleSort(arr); // sorting
+  
+	cout<<endl; 
+	
+  cout << endl << "After Sorting it looks like:- ";
+  for (int i = 0; i < size; i++) {
+    cout << arr[i] << "\t";
   }
 
   return 0;
